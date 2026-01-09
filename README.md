@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Cartoonifying Web App
+```
+A full stack web application that allows users to upload an image and receive a cartoonified version using OpenCV- based image processing model.
+The project supports real-time preview, adjustable parameters, and image download.
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+- Upload image (`.jpg`, `.png`)
+- Image type and size validation
+- Cartoonification using OpenCV (Python)
+- Adjustable edge intensity parameter
+- Before / After image preview
+- Download cartoonified image
+- Loading state during processing
+- Graceful error handling
+- Clean, responsive UI
 
-## Available Scripts
+## Tech Stack
+### Frontend
+- **React.js**
+- **Axios** (API requests)
+- **CSS** (custom styling)
 
-In the project directory, you can run:
+### Backend
+- **Node.js**
+- **Express.js**
+- **Multer** (multipart file uploads)
+- **Child Process** (Python invocation)
 
-### `npm start`
+### Image Processing
+- **Python 3**
+- **OpenCV**
+- **NumPy**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites 
+Make sure the following are installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Node.js (v16+)**
+- **npm**
+- **Python 3.8+**
+- **pip**
 
-### `npm test`
+## Setup
+### Backend
+Run these commands in terminal:
+```
+- cd backend
+- npm install 
+- express multer cors uuid
+- pip install opencv-python numpy
+- mkdir uploads outputs
+- node server.js
+```
+**You should see:**
+``` 
+✅ Server running on http://localhost:5000
+```
+### Frontend
+Run these commands in terminal:
+```
+- cd frontend
+- npm install
+- npm start
+```
+**Frontend will run at:**
+```
+http://localhost:3000
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to use the App:
+1) Open http://localhost:3000
 
-### `npm run build`
+2) Click Choose Image
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3) Adjust the Edge Intensity slider
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4) Click Cartoonify
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5) Wait for processing
 
-### `npm run eject`
+6) Preview original & cartoon image
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7) Click Download
